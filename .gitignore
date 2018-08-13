@@ -1,2 +1,5 @@
-*.bin
-*.hex
+*/*.bin
+*/*.hex
+*/*.elf
+*/*.map
+*/*.o

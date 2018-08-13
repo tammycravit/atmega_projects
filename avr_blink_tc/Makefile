@@ -90,7 +90,7 @@ $(TARGET).elf: $(OBJECTS)
 ## These targets don't have files named after them
 .PHONY: all disassemble disasm eeprom size clean squeaky_clean flash fuses
 
-all: $(TARGET).hex
+all: $(TARGET).hex size
 
 debug:
 	@echo
