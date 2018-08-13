@@ -1,6 +1,5 @@
 #include <avr/io.h>
 
-#define F_CPU 16000000UL
 #define TIMER_CLOCK 2
 
 int main()
