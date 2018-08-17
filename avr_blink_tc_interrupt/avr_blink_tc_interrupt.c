@@ -12,6 +12,16 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include "../library/simulavr_info.h"
+
+/////////////////////////
+// SimulAVR definitions for targeting
+/////////////////////////
+
+SIMINFO_DEVICE("attiny2313");
+SIMINFO_CPUFREQUENCY(F_CPU);
+SIMINFO_SERIAL_IN("D0", "-", 19200);
+SIMINFO_SERIAL_OUT("D1", "-", 19200);
 
 /////////////////////////
 // Global variables and constants
@@ -32,7 +42,6 @@ const uint16_t timer_delay = 8000;          // About 500ms at 1MHz, adjust as ne
 /////////////////////////
 
 ISR (TIMER1_OVF_vect) {
-  // Set the current light pattern.
   PORTB = pattern;
 
   // Set the direction flag so the chase pattern reverses at the top
