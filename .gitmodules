@@ -1,0 +1,39 @@
+[submodule "arduino/Libraries/lewis"]
+	path = arduino/Libraries/lewis
+	url = git@github.com:DefProc/lewis.git
+[submodule "arduino/Libraries/StepperDriver"]
+	path = arduino/Libraries/StepperDriver
+	url = git@github.com:laurb9/StepperDriver.git
+[submodule "arduino/Libraries/OneButton"]
+	path = arduino/Libraries/OneButton
+	url = git@github.com:mathertel/OneButton.git
+[submodule "arduino/Libraries/Bounce2"]
+	path = arduino/Libraries/Bounce2
+	url = git@github.com:thomasfredericks/Bounce2.git
+[submodule "arduino/Libraries/libhydrogen"]
+	path = arduino/Libraries/libhydrogen
+	url = git@github.com:jedisct1/libhydrogen.git
+[submodule "arduino/Libraries/TinyGPSPlus"]
+	path = arduino/Libraries/TinyGPSPlus
+	url = git@github.com:mikalhart/TinyGPSPlus.git
+[submodule "arduino/Libraries/easyMesh"]
+	path = arduino/Libraries/easyMesh
+	url = git@github.com:Coopdis/easyMesh.git
+[submodule "arduino/Libraries/TinyGSM"]
+	path = arduino/Libraries/TinyGSM
+	url = git@github.com:vshymanskyy/TinyGSM.git
+[submodule "arduino/Libraries/Webduino"]
+	path = arduino/Libraries/Webduino
+	url = git@github.com:sirleech/Webduino.git
+[submodule "arduino/Libraries/DHT-sensor-library"]
+	path = arduino/Libraries/DHT-sensor-library
+	url = git@github.com:adafruit/DHT-sensor-library.git
+[submodule "arduino/Libraries/Arduino-IRremote"]
+	path = arduino/Libraries/Arduino-IRremote
+	url = git@github.com:z3t0/Arduino-IRremote.git
+[submodule "arduino/Libraries/ArduinoJson"]
+	path = arduino/Libraries/ArduinoJson
+	url = git@github.com:bblanchon/ArduinoJson.git
+[submodule "arduino/Libraries/Adafruit_SHT31"]
+	path = arduino/Libraries/Adafruit_SHT31
+	url = git@github.com:adafruit/Adafruit_SHT31.git
