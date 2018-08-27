@@ -1,0 +1,73 @@
+###########################################################################
+#                         AVR-GCC Generic Makefile                        #
+###########################################################################
+#     Version 1.10, 2018-08-27, Tammy Cravit, tammycravit@gmail.com       #
+###########################################################################
+
+#==========================================================================
+# This Makefile is based upon the generic AVR-GCC Makefile from Elliot
+# Williams (https://bit.ly/2wuYQTz). I've modified it for my needs as
+# follows:
+#
+# 1. It now looks for the newer AVR-GCC toolchain from Zak Kemble's blog
+#    (http://blog.zakkemble.co.uk/avr-gcc-builds/) in /opt (on Linux) or
+#    c:\AVR-GCC (on Windows) and uses it if present.
+#
+# 2. It checks if LIBDIR exists, and skips it if not.
+#
+# 3. It allows default HFUSE/LFUSE/EFUSE settings for different MCUs, and
+#    also allows them to be overridden in the project-specific section.
+#
+# 4. It provides an "erase" target to erase the memory of the MCU.
+#
+# 5. It provides more detailed and pretty "make debug" output.
+#
+# 6. Moved some plumbing below the "you should not have to edit below this
+#    point" line.
+#
+# 7. Refactored the guts out into an include file, so you can override
+#    stuff here.
+#==========================================================================
+
+##########------------------------------------------------------##########
+##########              Project-specific Details                ##########
+##########    Check these every time you start a new project    ##########
+##########------------------------------------------------------##########
+
+# Target name. Taken from the enclosing directory name if unspecified.
+# TARGET =
+
+# Microcontroller type - must match a value from "avrdude -p ?"
+MCU   = attiny45
+
+# Microcontroller CPU speed
+F_CPU = 1000000UL
+
+# Baud rate for communication
+BAUD  = 19200UL
+
+# Processor fuse settings. If you don't override them here, the defaults
+# for your MCU type (as specified below - search for !FUSES) will be used
+# instead.
+#
+# LFUSE =
+# HFUSE =
+# EFUSE =
+
+## A directory for common include files and the simple USART library.
+## If you move either the current folder or the Library folder, you'll
+##  need to change this path to match.
+# LIBRARY_DIR=../library
+
+##########------------------------------------------------------##########
+##########                 Programmer Defaults                  ##########
+##########          Set up once, then forget about it           ##########
+##########------------------------------------------------------##########
+
+# Programmer type - must match a value from "avrdude -c ?"
+PROGRAMMER_TYPE = usbtiny
+
+# Extra arguments to avrdude: baud rate, chip type, -F flag, etc.
+PROGRAMMER_ARGS =
+
+include ../library/Makefile.mk
