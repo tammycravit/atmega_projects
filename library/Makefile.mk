@@ -24,49 +24,16 @@
 #
 # 6. Moved some plumbing below the "you should not have to edit below this
 #    point" line.
-#==========================================================================
-
-##########------------------------------------------------------##########
-##########              Project-specific Details                ##########
-##########    Check these every time you start a new project    ##########
-##########------------------------------------------------------##########
-
-# Target name. Taken from the enclosing directory name if unspecified.
-# TARGET =
-
-# Microcontroller type - must match a value from "avrdude -p ?"
-MCU   = attiny45
-
-# Microcontroller CPU speed
-F_CPU = 1000000UL
-
-# Baud rate for communication
-BAUD  = 19200UL
-
-# Processor fuse settings. If you don't override them here, the defaults
-# for your MCU type (as specified below - search for !FUSES) will be used
-# instead.
 #
-# LFUSE =
-# HFUSE =
-# EFUSE =
-
-## A directory for common include files and the simple USART library.
-## If you move either the current folder or the Library folder, you'll
-##  need to change this path to match.
-# LIBRARY_DIR=../library
-
-##########------------------------------------------------------##########
-##########                 Programmer Defaults                  ##########
-##########          Set up once, then forget about it           ##########
-##########        (Can override.  See bottom of file.)          ##########
-##########------------------------------------------------------##########
-
-# Programmer type - must match a value from "avrdude -c ?"
-PROGRAMMER_TYPE = usbtiny
-
-# Extra arguments to avrdude: baud rate, chip type, -F flag, etc.
-PROGRAMMER_ARGS =
+# 7. Refactored the guts out into an include file, so you can override
+#    stuff here.
+#==========================================================================
+# The project-specific Makefile template is in Makefile.template in this 
+# directory.  This Makefile is intended to be included by that file, and 
+# contains all the "plumbing" bits.
+#
+# You should not run this Makefile directly.
+#==========================================================================
 
 ##########------------------------------------------------------##########
 ##########                  Program Locations                   ##########
